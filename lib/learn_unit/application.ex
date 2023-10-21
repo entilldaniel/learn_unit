@@ -2,6 +2,7 @@ defmodule LearnUnit.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
+alias LearnUnit.TaskServer
 
   use Application
 
@@ -10,6 +11,7 @@ defmodule LearnUnit.Application do
     children = [
       # Starts a worker by calling: LearnUnit.Worker.start_link(arg)
       # {LearnUnit.Worker, arg}
+      TaskServer
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
